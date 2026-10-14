@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER_BREACH // AppHacking</title>
+  <meta name="description" content="Cyberpunk Video Feed and Repository Access for Nolger64/appHacking">
+  
+  <!-- Google Fonts: Orbitron, Rajdhani & Share Tech Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas de fondo para partículas y retícula cibernética -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- Efecto Scanline / CRT overlay -->
+  <div class="crt-overlay"></div>
+  <div class="vignette"></div>
+
+  <!-- Contenedor Principal -->
+  <div class="hud-wrapper">
+    
+    <!-- HEADER / HUD TOP BAR -->
+    <header class="hud-header">
+      <div class="hud-brand">
+        <span class="hud-glitch-icon"><i class="fa-solid fa-shield-halved"></i></span>
+        <div class="hud-brand-text">
+          <span class="brand-title">CYBER_CORE // SYS.OS</span>
+          <span class="brand-sub">SEC_NODE: 0x9F_APPHACKING</span>
+        </div>
+      </div>
+
+      <div class="hud-telemetry">
+        <div class="telemetry-item">
+          <span class="telemetry-label">SYSTEM_STATUS</span>
+          <span class="telemetry-value text-neon-green"><i class="fa-solid fa-circle-dot pulse-fast"></i> ONLINE</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="telemetry-label">SYS_CLOCK</span>
+          <span class="telemetry-value" id="sys-clock">00:00:00</span>
+        </div>
+      </div>
+
+      <div class="hud-actions">
+        <button id="sfx-toggle" class="cyber-btn-small" title="Alternar Efectos de Sonido Sintetizados">
+          <i class="fa-solid fa-volume-high"></i> SFX: <span id="sfx-status">ON</span>
+        </button>
+        <a href="https://github.com/Nolger64/appHacking" target="_blank" rel="noopener noreferrer" class="cyber-btn-nav">
+          <i class="fa-brands fa-github"></i> REPO_ACCESS
+        </a>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="hud-main">
+      
+      <!-- HERO TITLE -->
+      <section class="hero-section">
+        <div class="cyber-tag"><i class="fa-solid fa-terminal"></i> CLASSIFIED SURVEILLANCE FEED</div>
+        <h1 class="cyber-glitch-title" data-text="APPHACKING :: FEED">APPHACKING :: FEED</h1>
+        <p class="cyber-subtitle">ACCESO AL ARCHIVO DE TRANSMISIÓN DE DATOS &amp; PROTOCOLO DE REPOSITORIO</p>
+      </section>
+
+      <!-- VIDEO MONITOR TERMINAL -->
+      <section class="video-console-container">
+        <div class="cyber-frame">
+          <!-- Terminal Header -->
+          <div class="frame-header">
+            <div class="frame-window-controls">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot cyan"></span>
+            </div>
+            <div class="frame-title">
+              <i class="fa-solid fa-satellite-dish"></i> STREAM_RECEPTOR: GOOGLE_DRIVE_FEED // 1OsSqRfBx6TvXpStTRUzkVjc0qPKPLsMJ
+            </div>
+            <div class="frame-indicators">
+              <span class="badge-rec"><i class="fa-solid fa-record-vinyl pulse-fast"></i> REC</span>
+              <span class="badge-fps">60 FPS</span>
+            </div>
+          </div>
+
+          <!-- Video Wrapper -->
+          <div class="video-player-wrapper">
+            <iframe 
+              src="https://drive.google.com/file/d/1OsSqRfBx6TvXpStTRUzkVjc0qPKPLsMJ/preview" 
+              class="cyber-video-iframe" 
+              allow="autoplay; encrypted-media; fullscreen"
+              allowfullscreen
+              title="AppHacking Video Stream">
+            </iframe>
+            
+            <!-- HUD Watermark / Overlay Corners -->
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket top-right"></div>
+            <div class="corner-bracket bottom-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+
+          <!-- Terminal Footer -->
+          <div class="frame-footer">
+            <div class="stream-info">
+              <span class="info-tag">CODEC: H.264 // RAW</span>
+              <span class="info-tag">SOURCE: REMOTE DRIVE</span>
+              <span class="info-tag text-neon-cyan">SIGNAL: 99.4% OPTIMAL</span>
+            </div>
+            <div class="stream-links">
+              <a href="https://drive.google.com/file/d/1OsSqRfBx6TvXpStTRUzkVjc0qPKPLsMJ/view?usp=sharing" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="cyber-link-subtle">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> ABRIR EN DRIVE DIRECTO
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REPOSITORY DIRECT ACCESS GATEWAY -->
+      <section class="repo-gateway-section">
+        <div class="repo-panel">
+          <div class="repo-panel-deco"></div>
+          
+          <div class="repo-content">
+            <div class="repo-badge">
+              <i class="fa-solid fa-code-branch"></i> REPOSITORIO OFICIAL
+            </div>
+            <h2 class="repo-title">Nolger64 / <span class="text-neon-cyan">appHacking</span></h2>
+            <p class="repo-description">
+              Explora el código fuente del proyecto, herramientas integradas, módulos y scripts del repositorio oficial alojado en GitHub.
+            </p>
+
+            <!-- Big Cyber CTA Button -->
+            <div class="repo-cta-group">
+              <a href="https://github.com/Nolger64/appHacking" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="cyber-btn-main">
+                <span class="btn-glitch-layer"></span>
+                <span class="btn-content">
+                  <i class="fa-brands fa-github fa-xl"></i>
+                  <span>INGRESAR AL REPOSITORIO GITHUB</span>
+                  <i class="fa-solid fa-angles-right"></i>
+                </span>
+              </a>
+
+              <a href="https://github.com/Nolger64/appHacking/archive/refs/heads/main.zip" 
+                 class="cyber-btn-secondary"
+                 title="Descargar ZIP del repositorio">
+                <i class="fa-solid fa-download"></i> DESCARGAR ZIP
+              </a>
+            </div>
+
+            <!-- Terminal Clone Command Bar -->
+            <div class="terminal-bar">
+              <div class="terminal-bar-header">
+                <span><i class="fa-solid fa-terminal"></i> QUICK_CLONE // BASH</span>
+                <span id="copy-notify" class="copy-notify">¡COPIADO AL PORTAPAPELES!</span>
+              </div>
+              <div class="terminal-command-box">
+                <span class="prompt">$</span>
+                <code id="clone-cmd">git clone https://github.com/Nolger64/appHacking.git</code>
+                <button id="copy-btn" class="copy-button" title="Copiar comando">
+                  <i class="fa-regular fa-copy"></i> COPIAR
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tech Specs / Cyber Widgets -->
+          <div class="repo-widgets">
+            <div class="cyber-widget">
+              <div class="widget-icon"><i class="fa-solid fa-user-ninja text-neon-pink"></i></div>
+              <div class="widget-data">
+                <span class="widget-title">AUTHOR</span>
+                <span class="widget-val">@Nolger64</span>
+              </div>
+            </div>
+
+            <div class="cyber-widget">
+              <div class="widget-icon"><i class="fa-solid fa-box-archive text-neon-cyan"></i></div>
+              <div class="widget-data">
+                <span class="widget-title">REPOSITORY</span>
+                <span class="widget-val">appHacking</span>
+              </div>
+            </div>
+
+            <div class="cyber-widget">
+              <div class="widget-icon"><i class="fa-solid fa-network-wired text-neon-yellow"></i></div>
+              <div class="widget-data">
+                <span class="widget-title">HOSTING</span>
+                <span class="widget-val">GitHub Pages Ready</span>
+              </div>
+            </div>
+
+            <div class="cyber-widget">
+              <div class="widget-icon"><i class="fa-solid fa-lock-open text-neon-green"></i></div>
+              <div class="widget-data">
+                <span class="widget-title">SECURITY LEVEL</span>
+                <span class="widget-val">DECRYPTED_PUBLIC</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="hud-footer">
+      <div class="footer-left">
+        <span>&copy; CYBER_MATRIX // PROYECTO APPHACKING</span>
+      </div>
+      <div class="footer-center">
+        <span class="glitch-glow">NEO-TOKYO // SEC-09 // TERMINAL ACTIVE</span>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/Nolger64" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i> Nolger64
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
